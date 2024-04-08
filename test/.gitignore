@@ -1,2 +1,2 @@
-test-rbtree
+test-rbtree.c
 *.o
