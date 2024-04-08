@@ -3,9 +3,14 @@
 #include <stdlib.h>
 
 rbtree *new_rbtree(void) {
-  rbtree *p = (rbtree *)calloc(1, sizeof(rbtree));
-  // TODO: initialize struct if needed
-  return p;
+    rbtree *p = (rbtree *)calloc(1, sizeof(rbtree));
+
+    node_t *NIL = (node_t *)calloc(1, sizeof(node_t));
+    NIL->color = RBTREE_BLACK;
+
+    p->root = p->nil = NIL;
+
+    return p;
 }
 
 void delete_rbtree(rbtree *t) {
